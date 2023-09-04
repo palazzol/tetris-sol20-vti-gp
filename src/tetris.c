@@ -31,10 +31,19 @@
 #include "trs80.h"
 #endif
 
+#ifdef POLY88
+#define COUNTER_MAX            2000    // the speed counter at level 0
+#include "poly88.h"
+#endif
+
 #include "draw.h"
 #include "pieces.h"
 
+#ifdef POLY88
+#define EMPTY_GR_CHAR  191
+#else
 #define EMPTY_GR_CHAR  32
+#endif
 #define EMPTY_GR_COLOR REVERSE_OFF
 
 byte piece_chars[NUMPIECES+1] = {

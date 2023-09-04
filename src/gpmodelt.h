@@ -11,13 +11,15 @@
 #define REVERSE_ON  128
 
 #define FRAME_VERT      (131-128)
-#define FRAME_HORIZ     (132-128)
+#define FRAME_HORIZL    (132-128)
+#define FRAME_HORIZR    (132-128)
 #define FRAME_NW_CORNER (129-128)
 #define FRAME_NE_CORNER (130-128)
 #define FRAME_SW_CORNER (134-128)
 #define FRAME_SE_CORNER (135-128)
 
-#define FRAME_BOARD_VERT (132-128)
+#define FRAME_BOARD_VERTL (132-128)
+#define FRAME_BOARD_VERTR (132-128)
 
 #define CH_BACKGROUND 25
 #define CH_SPACE      32

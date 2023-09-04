@@ -68,8 +68,8 @@ void drawFrame(byte x, byte y, byte w, byte h, byte color) {
       draw_tile(x+i, y+h-1, FRAME_VERT, color);
    }
    for (i=1; i<h-1; i++) {
-      draw_tile(x    , y+i, FRAME_HORIZ, color);
-      draw_tile(x+w-1, y+i, FRAME_HORIZ, color);
+      draw_tile(x    , y+i, FRAME_HORIZL, color);
+      draw_tile(x+w-1, y+i, FRAME_HORIZR, color);
    }
 
    draw_tile(x     ,y    , FRAME_NE_CORNER, color);
@@ -101,8 +101,8 @@ void drawPlayground() {
    // tetris frame
    fillFrame(STARTBOARD_X,STARTBOARD_Y,BCOLS*DOUBLEFACTOR,BROWS,CH_SPACE,REVERSE_OFF);
    #if SCREEN_HEIGHT == 16
-      fillFrame(STARTBOARD_X-1, 0, 1, SCREEN_HEIGHT, FRAME_BOARD_VERT, REVERSE_OFF);      
-      fillFrame(STARTBOARD_X-1+(BCOLS*DOUBLEFACTOR+1), 0, 1, SCREEN_HEIGHT, FRAME_BOARD_VERT, REVERSE_OFF);      
+      fillFrame(STARTBOARD_X-1, 0, 1, SCREEN_HEIGHT, FRAME_BOARD_VERTL, REVERSE_OFF);      
+      fillFrame(STARTBOARD_X-1+(BCOLS*DOUBLEFACTOR+1), 0, 1, SCREEN_HEIGHT, FRAME_BOARD_VERTR, REVERSE_OFF);      
    #else
       drawFrame((byte)(STARTBOARD_X-1),(byte)(STARTBOARD_Y-1),(byte) (BCOLS*DOUBLEFACTOR+2),(byte) (BROWS+2), frame_color);
    #endif
